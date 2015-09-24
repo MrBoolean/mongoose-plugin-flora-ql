@@ -1,15 +1,22 @@
-var gulp   = require('gulp');
-var mocha  = require('gulp-mocha');
-var eslint = require('gulp-eslint');
+var gulp     = require('gulp');
+var mocha    = require('gulp-mocha');
+var eslint   = require('gulp-eslint');
+var coverage = require('gulp-coverage');
 
-gulp.task('test', function() {
+gulp.task('test', function test() {
   return gulp
-    .src('test/**/*.test.js', { read: false })
-    .pipe(mocha({ reporter: 'nyan' }))
+    .src(['index.js', 'test/**/*.test.js'], { read: false })
+    .pipe(coverage.instrument({
+      pattern: ['index.js']
+    }))
+    .pipe(mocha())
+    .pipe(coverage.gather())
+    .pipe(coverage.format())
+    .pipe(gulp.dest('dist/coverage'))
   ;
 });
 
-gulp.task('lint', function() {
+gulp.task('lint', function lint() {
   return gulp
     .src(['lib/**/*.js'])
     .pipe(eslint())
