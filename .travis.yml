@@ -5,3 +5,4 @@ node_js:
   - '4.0.0'
   - 'iojs-v2.0.0'
 script: 'gulp'
+after_script: 'CODECLIMATE_REPO_TOKEN=aec1a722b992b7cde331f4c04cf5afc81ea29a5ff89032c9c69b33b68b7b9914 ./node_modules/.bin/codeclimate-test-reporter < ./dist/coverage/coverage.lcov'

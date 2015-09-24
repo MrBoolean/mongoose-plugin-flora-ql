@@ -14,7 +14,8 @@ gulp.task('test', function test() {
     .pipe(coverage.gather())
     .pipe(coverage.format([
       { reporter: 'html', outFile: 'coverage.html' },
-      { reporter: 'json', outFile: 'coverage.json' }
+      { reporter: 'json', outFile: 'coverage.json' },
+      { reporter: 'lcov', outFile: 'coverage.lcov' }
     ]))
     .pipe(gulp.dest('dist/coverage'))
   ;
