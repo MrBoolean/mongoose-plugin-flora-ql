@@ -16,6 +16,7 @@ var plugin   = require('../').plugin;
 var schema;
 var User;
 
+// https://registry.hub.docker.com/_/mongo
 mongoose.connect('mongodb://192.168.99.100:32768/mongoose-plugin-flora-ql');
 
 // the collection contains:
