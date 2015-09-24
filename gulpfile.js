@@ -23,7 +23,7 @@ gulp.task('test', function test() {
 
 gulp.task('lint', function lint() {
   return gulp
-    .src(['lib/**/*.js'])
+    .src(['lib/**/*.js', 'test/**/*.js', 'example/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
