@@ -1,18 +1,32 @@
-# flora-ql-mongodb
+# mongoose-plugin-flora-ql
 [![Build Status](https://travis-ci.org/godmodelabs/flora-ql-mongodb.svg)](https://travis-ci.org/godmodelabs/flora-ql-mongodb)
 [![Code Climate](https://codeclimate.com/github/godmodelabs/flora-ql-mongodb/badges/gpa.svg)](https://codeclimate.com/github/godmodelabs/flora-ql-mongodb)
 [![Version](https://img.shields.io/npm/v/flora-ql-mongodb.svg?style=flat-square)](https://www.npmjs.com/package/flora-ql-mongodb)
 
 ## Install
 ```bash
-npm i --save flora-ql-mongodb
+npm i --save mongoose-plugin-flora-ql
 ```
 
 ## Usage
 ```javascript
-var fqlm = require('flora-ql-mongodb');
+var plugin   = require('mongoose-plugin-flora-ql');
+var mongoose = require('mongoose');
+var schema;
+var User;
 
-fqlm('userId>1000 AND userId<2000 AND isDeleted=true'); // returns the mongodb query
+schema = new mongoose.Schema({
+  nickname: String,
+  emailAddress: String,
+  isActive: Boolean,
+  isDeleted: Boolean
+});
+
+schema.plugin(plugin);
+User = mongoose.model('User', schema);
+User.fql('isActive=false OR isDeleted=true', function (err, data) {
+  // ...
+});
 ```
 
 ## License
