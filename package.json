@@ -1,5 +1,5 @@
 {
-  "name": "flora-ql-mongodb",
+  "name": "mongoose-plugin-flora-ql",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
