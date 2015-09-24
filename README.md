@@ -1,4 +1,6 @@
 # flora-ql-mongodb
+[![Code Climate](https://codeclimate.com/github/godmodelabs/flora-ql-mongodb/badges/gpa.svg)](https://codeclimate.com/github/godmodelabs/flora-ql-mongodb)
+[![Version](https://img.shields.io/npm/v/flora-ql-mongodb.svg?style=flat-square)](https://www.npmjs.com/package/flora-ql-mongodb)
 
 ## Install
 ```bash

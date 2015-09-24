@@ -7,11 +7,15 @@ gulp.task('test', function test() {
   return gulp
     .src(['index.js', 'test/**/*.test.js'], { read: false })
     .pipe(coverage.instrument({
-      pattern: ['index.js']
+      pattern: ['index.js'],
+      debugDirectory: 'dist/debug'
     }))
     .pipe(mocha())
     .pipe(coverage.gather())
-    .pipe(coverage.format())
+    .pipe(coverage.format([
+      { reporter: 'html', outFile: 'dist/coverage.html' },
+      { reporter: 'json', outFile: 'dist/coverage.json' }
+    ]))
     .pipe(gulp.dest('dist/coverage'))
   ;
 });
