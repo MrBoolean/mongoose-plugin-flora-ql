@@ -1,7 +1,7 @@
 # mongoose-plugin-flora-ql
-[![Build Status](https://travis-ci.org/godmodelabs/flora-ql-mongodb.svg)](https://travis-ci.org/godmodelabs/flora-ql-mongodb)
-[![Code Climate](https://codeclimate.com/github/godmodelabs/flora-ql-mongodb/badges/gpa.svg)](https://codeclimate.com/github/godmodelabs/flora-ql-mongodb)
-[![Version](https://img.shields.io/npm/v/flora-ql-mongodb.svg?style=flat-square)](https://www.npmjs.com/package/flora-ql-mongodb)
+[![Build Status](https://travis-ci.org/MrBoolean/mongoose-plugin-flora-ql.svg)](https://travis-ci.org/MrBoolean/mongoose-plugin-flora-ql)
+[![Code Climate](https://codeclimate.com/github/MrBoolean/mongoose-plugin-flora-ql/badges/gpa.svg)](https://codeclimate.com/github/MrBoolean/mongoose-plugin-flora-ql)
+[![Version](https://img.shields.io/npm/v/mongoose-plugin-flora-ql.svg?style=flat-square)](https://www.npmjs.com/package/mongoose-plugin-flora-ql)
 
 ## Install
 ```bash
