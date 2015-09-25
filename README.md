@@ -12,7 +12,7 @@ npm i --save mongoose-plugin-flora-ql
 ## Example
 ```javascript
 var mongoose = require('mongoose');
-var plugin   = require('../').plugin;
+var plugin   = require('mongoose-plugin-flora-ql').plugin;
 var schema;
 var User;
 
